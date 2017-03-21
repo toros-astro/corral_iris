@@ -1,6 +1,6 @@
 alembic==0.9.1
 attrs==16.3.0
--e git+git@github.com:toros-astro/corral.git@5bae6aa1a733fb5bd5762f6092e2d18af9c054a2#egg=corral_pipeline
+corral-pipeline
 coverage==4.3.4
 flake8==2.6.2
 funcsigs==1.0.2
