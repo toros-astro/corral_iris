@@ -19,7 +19,7 @@
 
 from corral import qa
 
-# from . import models
+from . import models, steps
 
 
 # =============================================================================
@@ -28,10 +28,19 @@ from corral import qa
 
 class MyTestCase(qa.TestCase):
 
-    # subject = Model
+    subject = steps.StatisticsCreator
 
     def setup(self):
-        pass
+        name = models.Name(name="foo")
+        self.save(name)
 
     def validate(self):
-        pass
+        self.assertStreamHas(
+            models.Name, models.Name.name=="foo")
+        self.assertStreamCount(1, models.Name)
+
+        name = self.session.query(models.Name).first()
+
+        self.assertStreamHas(
+            models.Statistics, models.Statistics.name_id==name.id)
+        self.assertStreamCount(1, models.Statistics)
