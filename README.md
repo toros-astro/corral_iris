@@ -1,2 +1,3 @@
-# corral_iris
+# CORRAL - Iris
+
 Corral Example Pipeline using Iris Dataset
