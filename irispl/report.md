@@ -1,6 +1,6 @@
 # irispl Quality Report
 
-- **Created at:** 2017-03-21 04:05:50.675319
+- **Created at:** 2017-04-10 21:06:01.083159
 - **Corral Version:** 0.2.6
 
 
@@ -9,13 +9,13 @@
 - **Tests Success:** `Yes`
 - **Tests Ran:** `1`
 - **Processors:** `6`
-- **Coverage:** `61.75%`
-- **Maintainability & Style Errors:** `6`
+- **Coverage:** `62.83%`
+- **Maintainability & Style Errors:** `8`
 
 <!-- -->
 
-- **QA Index:** `8.60%`
-- **QA Qualification:** `F`
+- **QA Index:** `8.67%`
+- **QA Qualification:** `FAIL`
 
 
 ### 1.1 About The Corral Quality Assurance Index (QAI)
@@ -43,19 +43,8 @@ QAI = 2 * (TP * (T/PNC) * COV) / (1 + exp(MSE/tau))
 The Corral qualification is a quantitave scale based on QAI
 
 
-- QAI >= 0.00% -- `F`
-- QAI >= 60.00% -- `D-`
-- QAI >= 63.00% -- `D`
-- QAI >= 67.00% -- `D+`
-- QAI >= 70.00% -- `C-`
-- QAI >= 73.00% -- `C`
-- QAI >= 77.00% -- `C+`
-- QAI >= 80.00% -- `B-`
-- QAI >= 83.00% -- `B`
-- QAI >= 87.00% -- `B+`
-- QAI >= 90.00% -- `A-`
-- QAI >= 93.00% -- `A`
-- QAI >= 95.00% -- `A+`
+- QAI >= 0.00% -- `FAIL`
+- QAI >= 60.00% -- `PASS`
 
 
 
@@ -63,10 +52,10 @@ The Corral qualification is a quantitave scale based on QAI
 
 ### 2.1 Tests
 ```
-runTest (irispl.tests.MyTestCase) ... ok
+runTest (irispl.tests.StatisticsCreateAnyNameTest) ... ok
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.409s
+Ran 1 test in 0.436s
 
 OK
 
@@ -78,16 +67,16 @@ OK
 Name                 Stmts   Miss  Cover
 ----------------------------------------
 irispl/__init__.py       1      0   100%
-irispl/alerts.py         7      0   100%
-irispl/commands.py       5      1    80%
+irispl/alerts.py        10      1    90%
+irispl/commands.py       6      1    83%
 irispl/load.py          25     14    44%
 irispl/models.py        34      1    97%
 irispl/pipeline.py       4      0   100%
-irispl/settings.py      17      0   100%
-irispl/steps.py         76     54    29%
+irispl/settings.py      18      0   100%
+irispl/steps.py         79     54    32%
 irispl/tests.py         14      0   100%
 ----------------------------------------
-TOTAL                  183     70    62%
+TOTAL                  191     71    63%
 
 ```
 ---
@@ -98,11 +87,15 @@ Found pep8-style errors.
 Please check the Python code style reference: https://www.python.org/dev/peps/pep-0008/
 
 Errors found: 
+irispl/alerts.py:51:0: W391 blank line at end of file
+irispl/commands.py:27:0: E302 expected 2 blank lines, found 1
 irispl/settings.py:41:8: E126 continuation line over-indented for hanging indent
+irispl/settings.py:85:8: E126 continuation line over-indented for hanging indent
+irispl/settings.py:87:4: E121 continuation line under-indented for hanging indent
 irispl/steps.py:36:37: E225 missing whitespace around operator
 irispl/steps.py:53:43: E225 missing whitespace around operator
-irispl/steps.py:84:43: E225 missing whitespace around operator
-irispl/steps.py:115:43: E225 missing whitespace around operator
+irispl/steps.py:85:43: E225 missing whitespace around operator
+irispl/steps.py:117:43: E225 missing whitespace around operator
 irispl/tests.py:39:41: E225 missing whitespace around operator
 irispl/tests.py:45:56: E225 missing whitespace around operator
 ```

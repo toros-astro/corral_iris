@@ -19,12 +19,13 @@
 
 from corral import cli
 
-
+import sh
 # =============================================================================
 # COMMANDS
 # =============================================================================
 
-class ExampleCommand(cli.BaseCommand):
+class LS(cli.BaseCommand):
+    "hace el ls macho"
 
     def handle(self):
-        raise NotImplementedError
+        print sh.ls()

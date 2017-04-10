@@ -26,7 +26,7 @@ from . import models, steps
 # LOADER
 # =============================================================================
 
-class MyTestCase(qa.TestCase):
+class StatisticsCreateAnyNameTest(qa.TestCase):
 
     subject = steps.StatisticsCreator
 

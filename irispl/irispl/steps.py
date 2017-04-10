@@ -51,6 +51,7 @@ class SetosaStatistics(run.Step):
     conditions = [
         models.Statistics.name.has(name="Iris-setosa"),
         models.Statistics.mean_sepal_length==0.]
+    groups = ["default", "statistics"]
 
     def process(self, stats):
         sepal_length, sepal_width, petal_length, petal_width = [], [], [], []
@@ -82,6 +83,7 @@ class VersicolorStatistics(run.Step):
     conditions = [
         models.Statistics.name.has(name="Iris-versicolor"),
         models.Statistics.mean_sepal_length==0.]
+    groups = ["default", "statistics"]
 
     def process(self, stats):
         sepal_length, sepal_width, petal_length, petal_width = [], [], [], []
@@ -113,6 +115,7 @@ class VirginicaStatistics(run.Step):
     conditions = [
         models.Statistics.name.has(name="Iris-virginica"),
         models.Statistics.mean_sepal_length==0.]
+    groups = ["default", "statistics"]
 
     def process(self, stats):
         sepal_length, sepal_width, petal_length, petal_width = [], [], [], []

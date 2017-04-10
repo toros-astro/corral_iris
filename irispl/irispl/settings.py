@@ -62,7 +62,7 @@ STEPS = [
 
 
 # The alerts
-ALERTS = ["irispl.alerts.MyAlert"]
+ALERTS = ["irispl.alerts.StatisticsAlert"]
 
 # This values are autoimported when you open the shell
 SHELL_LOCALS = {}
